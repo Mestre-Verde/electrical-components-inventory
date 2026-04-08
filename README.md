@@ -33,7 +33,7 @@ Exemplos de tipos:
 ### Exemplo de estrutura global
 
 ```text
-components_db/
+data/
 ├── resistencias/
 │   ├── 0001/
 │   ├── 0003/
@@ -55,8 +55,7 @@ Cada componente possui a sua própria pasta, contendo todos os ficheiros associa
 
 ```text
 components_db/resistencias/0001/
-├── component.yaml
-├── inbox/
+├── component.json
 ├── images/
 ├── datasheets/
 ├── files/
@@ -67,12 +66,11 @@ components_db/resistencias/0001/
 
 | Ficheiro / Pasta | Função                                   |
 | ---------------- | ---------------------------------------- |
-| `component.yaml` | Dados estruturados do componente         |
+| `component.json` | Dados estruturados do componente         |
 | `images/`        | Imagens (fotografias, pinout, diagramas) |
 | `datasheets/`    | Datasheets e documentação técnica        |
 | `files/`         | Outros ficheiros relevantes              |
 | `notes.txt`      | Descrição longa e notas pessoais         |
-| `inbox/`         | Pasta temporária para novos ficheiros    |
 
 ---
 
