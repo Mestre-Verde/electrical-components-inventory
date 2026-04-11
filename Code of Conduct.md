@@ -64,3 +64,6 @@ int soma(int a, int b) {
 * Nomes de funções claros: `calculaMedia()`, `imprimeMenu()`
 * Separe código em módulos/pastas por funcionalidade (ex: `menus/`, `utils/`, `math/`)
 
+# Notas de comunidade
+ - Proibido leftis woke;
+ - Proibidos terroristas islamicos e seus apoiadores;
