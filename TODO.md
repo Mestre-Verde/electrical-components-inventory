@@ -15,3 +15,5 @@
 Criar enums para cada tipo de componente, facilia na procura de ficheiros.
 criar um ficheiro relacionado com procura de ficheiros
 criar funções de adição, remoção, edição
+
+Olá....
