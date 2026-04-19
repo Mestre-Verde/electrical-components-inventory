@@ -1,11 +1,11 @@
 # TODO – Mini Projeto
 
 ## Criar a GUI
-   - àrea de iunput;
+   - área de input;
    - botões com as funções;
    - histórico ao lado com posisbilidade de copiar(selecionar o texto, não pode copiar ao clicar);
-   - 
+   - secção extra para calulos complexos.
   
-## alguritmo para separar a imput do usuário.
+## algoritmo para separar a input do usuário.
 
-Olá....
+

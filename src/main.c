@@ -1,22 +1,26 @@
 #include <stdbool.h>  // inclui o bool
 #include <stdio.h>
 
-#define TMP_FOLDER "tmp/"
-#define SCRIPT_FILE "scripts/GUI.py"
+#define IMPUT_FILE_PATH "tmp/input.tmp"
+#define OUTPUT_FILE_PATH "tmp/output.tmp"
+#define HISTORY "data/history.txt"
+enum Commands = {SETUP =0}
 
-/**
- * @brief Verifica a integridade do inventário
- * 
- * @return 1 se correu algo mal,0 se não acusar nada.
- * @author M.V.
- */
+
 _Bool setup() {
   return 0;
 }
 
-int main(void) {
-  if (setup()) goto end;
+int main(int argc, char const* argv[]) {
+  if (argc < 2) {
+    printf("Erro\n");
+    return 1;
+  }
 
-end:
+  switch (expression) {
+    case 0: setup(); break;
+
+    default: break;
+  }
   return 0;
 }
