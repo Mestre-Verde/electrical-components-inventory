@@ -5,74 +5,35 @@ INPUT = "tmp/input.tmp"
 OUTPUT = "tmp/output.tmp"
 HISTORY = "data/history.txt"
 
-last_history_content = None
-
-#void loop
-def background_update():
-    resultado = readOutputFromFile()
-
-    if resultado is not None:
-        print("Novo output:", resultado)
-        # aqui podes ligar à UI depois
-
-    updateHistory()
-    janela.after(500, background_update)
-
 # ---------------- I/O ----------------
 def saveInputToFile():
     with open(INPUT, "w") as f:
         f.write(display.get())
 
 #O executavel vai escrever em cima do texto anterior não o python
-last_output = ""
-
 def readOutputFromFile():
-    global last_output
-
     try:
         with open(OUTPUT, "r") as f:
-            content = f.read().strip()
-
-        # só devolve se mudou
-        if content == last_output:
-            return None
-
-        last_output = content
-        return content
-
-    except FileNotFoundError:
-        return None
-    except Exception as e:
-        print("Erro ao ler OUTPUT:", e)
-        return None
+            return f.read()
+    except:
+        return "Erro"
 
 def sendCommandToExecutable():
     # aqui vais ligar ao C depois
     pass
 
+# - abre history.txt
+# - lê tudo 
+# - mostra no Listbox
 def updateHistory():
-    global last_history_content
-
     try:
         with open(HISTORY, "r") as f:
-            content = f.read()
-
-        # só atualiza se mudou
-        if content == last_history_content:
-            return
-
-        last_history_content = content
-
-        historico.delete(0, tk.END)
-
-        for line in content.splitlines():
-            historico.insert(tk.END, line)
-
-        # auto-scroll para o fim
-        historico.yview_moveto(1)
-
+            historico.delete(0, tk.END)
+            for line in f:
+                historico.insert(tk.END, line.strip())
     except:
         pass
+
 # ---------------- UI logic ----------------
 def clicar(valor):
     display.insert(tk.END, valor)
@@ -192,6 +153,4 @@ tk.Button(frame_fracoes, text="=", command=calcular_fracao)\
 
 # ---------------- start ----------------
 frame_normal.grid()
-background_update()
 janela.mainloop()
-

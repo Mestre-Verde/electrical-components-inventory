@@ -9,5 +9,5 @@
   - Divisão;
 - Bibliotecas adicionais:
   - faturização;
-  - calculo com frações;
+  - calculo com Frações;
 - Histórico;

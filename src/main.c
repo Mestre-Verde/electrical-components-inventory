@@ -8,7 +8,7 @@ enum Commands = {SETUP =0}
 
 
 _Bool setup() {
-  return 0;
+  puts("Dentro de setup().") return 0;
 }
 
 int main(int argc, char const* argv[]) {
